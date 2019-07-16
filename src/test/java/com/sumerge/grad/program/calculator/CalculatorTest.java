@@ -37,4 +37,15 @@ public class CalculatorTest {
     public void divide() {
         Assert.assertThat(calculator.divide(10.0, 2.0), equalTo(5.0));
     }
+
+    @Test
+    public void testing(){
+        Assert.assertTrue(calculator.add(2.0,2.0)==4);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void dividingByZero(){
+       calculator.divide(1.0,0.0);
+    }
+
 }
